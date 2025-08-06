@@ -1,21 +1,31 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    // ½Ì±ÛÅæ °´Ã¼ ¼±¾ğ
+    // ì‹±ê¸€í†¤ ê°ì²´ ì„ ì–¸
     public static UIManager InstanceUI = null;
 
-    // ÀÚ±â ÀÚ½ÅÀÌ ¾øÀ¸¸é ÀÚ½ÅÀ» ÇÒ´çÇÑ´Ù.
+    // ìê¸° ìì‹ ì´ ì—†ìœ¼ë©´ ìì‹ ì„ í• ë‹¹í•œë‹¤.
     private void Awake()
     {
         if (InstanceUI == null)
             InstanceUI = this;
     }
 
-    public void StartGame()
+    public void ToStartMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
+
+    public void ToSelectPlayer()
+    {
+        SceneManager.LoadScene("SelectCharacter");
+    }
+
+    public void ToGame()
     {
         SceneManager.LoadScene("World");
     }
