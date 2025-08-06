@@ -4,4 +4,4 @@
   - Graphics(캐릭터, 배경 일러스트 등) : psd, jpg, png 등
   - Proposal(기획안) : pptx, hwp 등
   - PureRef : 퓨어레프 이미지 파일
-  - Unity : 본 프로젝트
+  - Unity : 본 프로젝트, 레이아웃 세팅, 이펙트용 프로젝트 파일 등
