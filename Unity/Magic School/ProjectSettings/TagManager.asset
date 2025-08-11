@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Potral
+  - Forest
+  - Plain
+  - Lakeside
   layers:
   - Default
   - TransparentFX
@@ -12,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -46,6 +50,9 @@ TagManager:
     locked: 0
   - name: Portal
     uniqueID: 3876528973
+    locked: 0
+  - name: MonsterCloud
+    uniqueID: 489599281
     locked: 0
   - name: Player
     uniqueID: 507466587
