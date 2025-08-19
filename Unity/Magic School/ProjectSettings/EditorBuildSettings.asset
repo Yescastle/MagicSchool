@@ -9,17 +9,20 @@ EditorBuildSettings:
     path: Assets/00_Scenes/01_Menu/StartMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/00_Scenes/01_Menu/CreateNew.unity
+    guid: fbbe3110d284f7243bd66131ad76f1d8
+  - enabled: 1
     path: Assets/00_Scenes/01_Menu/SelectCharacter.unity
     guid: 0e0bc49dda82985418fdb3b98f6e71c4
   - enabled: 1
     path: Assets/00_Scenes/02_Map/Village.unity
-    guid: 76d452021df7deb44b2b3faf8085233d
+    guid: 56342a9697cbee349a92b27f092a0946
   - enabled: 1
     path: Assets/00_Scenes/02_Map/School.unity
-    guid: 5d50d7f5d3efde545ac26593a4c3e9f9
+    guid: 86099822aebcb424aaf9db0935e247d8
   - enabled: 1
     path: Assets/00_Scenes/02_Map/Marketplace.unity
-    guid: d39546777624c0345b01581881130b84
+    guid: 756d0cd6e296d9f4a8b82605a2e8397e
   - enabled: 1
     path: Assets/00_Scenes/02_Map/World.unity
     guid: be2e6a2196440f74da58cdd50f41f76e
@@ -33,6 +36,6 @@ EditorBuildSettings:
     path: Assets/00_Scenes/03_Fight/Plain.unity
     guid: 5c1265ad615893747a81ec9fb01f6d2b
   - enabled: 1
-    path: Assets/00_Scenes/00_Common/Loading.unity
+    path: Assets/00_Scenes/00_Loading/Loading.unity
     guid: 78caadfb0db691d4b9cb803e9493bc9d
   m_configObjects: {}

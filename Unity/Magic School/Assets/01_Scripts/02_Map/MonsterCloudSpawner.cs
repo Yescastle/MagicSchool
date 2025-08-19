@@ -1,46 +1,46 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MonsterCloudSpawner : MonoBehaviour
 {
-    // ¹üÀ§ Á¦ÇÑ
+    // ë²”ìœ„ ì œí•œ
     public float xMin, xMax, yMin, yMax;
 
-    // ÃÖ¼Ò ½Ã°£°ú ÃÖ´ë ½Ã°£
+    // ìµœì†Œ ì‹œê°„ê³¼ ìµœëŒ€ ì‹œê°„
     float minTime = 0.5f;
     float maxTime = 2f;
 
-    // Á¤ÇØÁø ½Ã°£µ¿¾È ±¸¸§ÀÌ »ı¼º
+    // ì •í•´ì§„ ì‹œê°„ë™ì•ˆ êµ¬ë¦„ì´ ìƒì„±
     float currentTime;
     float createTime;
 
-    // ¸ó½ºÅÍ ±¸¸§ ¼±ÅÃ, ±×¸®°í ¿ÀºêÁ§Æ® Ç® »ı¼º
+    // ëª¬ìŠ¤í„° êµ¬ë¦„ ì„ íƒ, ê·¸ë¦¬ê³  ì˜¤ë¸Œì íŠ¸ í’€ ìƒì„±
     public GameObject selectedMonsterCloud;
     public List<GameObject> monsterCloudPool;
     public List<GameObject> respawnPool;
 
-    // Ç® Å©±â : ±âº»Àº 5
+    // í’€ í¬ê¸° : ê¸°ë³¸ì€ 5
     public int poolSize;
 
     private void Start()
     {
-        // ¸ó½ºÅÍ ±¸¸§ »ı¼º½Ã°£Àº ÁÖ¾îÁø ¹üÀ§¿¡¼­
+        // ëª¬ìŠ¤í„° êµ¬ë¦„ ìƒì„±ì‹œê°„ì€ ì£¼ì–´ì§„ ë²”ìœ„ì—ì„œ
         createTime = Random.Range(minTime, maxTime);
 
-        // ¿ÀºêÁ§Æ® Ç®µµ ½ÃÀÛÇÒ ¶§ ¸¸µç´Ù.
+        // ì˜¤ë¸Œì íŠ¸ í’€ë„ ì‹œì‘í•  ë•Œ ë§Œë“ ë‹¤.
         monsterCloudPool = new List<GameObject>();
 
-        // Ç®¿¡´Ù°¡ ¸ó½ºÅÍ ±¸¸§µé ³Ö±â
+        // í’€ì—ë‹¤ê°€ ëª¬ìŠ¤í„° êµ¬ë¦„ë“¤ ë„£ê¸°
         for (int i = 0; i < poolSize; i++)
         {
-            // ¸ó½ºÅÍ ±¸¸§ °¡Á®¿À±â
+            // ëª¬ìŠ¤í„° êµ¬ë¦„ ê°€ì ¸ì˜¤ê¸°
             GameObject monsterCloud = Instantiate(selectedMonsterCloud);
 
-            // ¸®½ºÆ®¿¡´Ù°¡ Áı¾î³Ö±â
+            // ë¦¬ìŠ¤íŠ¸ì—ë‹¤ê°€ ì§‘ì–´ë„£ê¸°
             monsterCloudPool.Add(monsterCloud);
 
-            // ºñÈ°¼ºÈ­
+            // ë¹„í™œì„±í™”
             monsterCloud.SetActive(false);
         }
     }
@@ -52,35 +52,42 @@ public class MonsterCloudSpawner : MonoBehaviour
         {
             if (monsterCloudPool.Count > 0)
             {
-                // ¸®½ºÆ®¿¡¼­ Ã¹¹øÂ° ±¸¸§À» ¼±ÅÃ
+                // ë¦¬ìŠ¤íŠ¸ì—ì„œ ì²«ë²ˆì§¸ êµ¬ë¦„ì„ ì„ íƒ
                 GameObject monsterCloud = monsterCloudPool[0];
 
-                // ±×¸®°í È°¼ºÈ­
+                // ê·¸ë¦¬ê³  í™œì„±í™”
                 monsterCloud.SetActive(true);
 
-                // ¹üÀ§´Â ·£´ı ÁöÁ¤
+                // ë²”ìœ„ëŠ” ëœë¤ ì§€ì •
                 monsterCloud.transform.position = new Vector2(Random.Range(xMin, xMax), Random.Range(yMin, yMax));
 
-                // ³ªÅ¸³­ ±¸¸§Àº ¸®½ºÆ®¿¡¼­ Á¦°Å
+                // ë‚˜íƒ€ë‚œ êµ¬ë¦„ì€ ë¦¬ìŠ¤íŠ¸ì—ì„œ ì œê±°
                 monsterCloudPool.RemoveAt(0);
 
-                // ¸®½ºÆù Ç®¿¡ Á¦°ÅµÈ ±¸¸§À» Áı¾î³Ö±â
+                // ë¦¬ìŠ¤í° í’€ì— ì œê±°ëœ êµ¬ë¦„ì„ ì§‘ì–´ë„£ê¸°
                 respawnPool.Add(monsterCloud);
             }
 
-            // ÇöÀç ½Ã°£ 0À¸·Î ÃÊ±âÈ­
+            // í˜„ì¬ ì‹œê°„ 0ìœ¼ë¡œ ì´ˆê¸°í™”
             currentTime = 0;
 
-            // Àû »ı¼º ÈÄ ½Ã°£ ÃÊ±âÈ­
+            // ì  ìƒì„± í›„ ì‹œê°„ ì´ˆê¸°í™”
             createTime = Random.Range(minTime, maxTime);
         }
 
+        // ë§Œì•½ ë¦¬ìŠ¤í° í’€ì— ìˆëŠ” ì˜¤ë¸Œì íŠ¸ì˜ ìˆ˜ê°€ 0ë³´ë‹¤ í¬ë‹¤ë©´?
         if(respawnPool.Count > 0)
         {
+            // ê·¸ ì•ˆì— ìˆëŠ” ì²«ë²ˆì§¸ ì˜¤ë¸Œì íŠ¸ ë³€ìˆ˜ ì„ ì–¸
             GameObject mc = respawnPool[0];
+
+            // ë§Œì•½ ì–˜ê°€ ë¹„í™œì„±í™” ë˜ì–´ìˆë‹¤ë©´?
             if (mc.activeSelf == false)
             {
+                // ê¸°ì¡´ ì˜¤ë¸Œì íŠ¸ í’€ì— ì–˜ ì§‘ì–´ë„£ê³ 
                 monsterCloudPool.Add(mc);
+                
+                // ë¦¬ìŠ¤í° í’€ì—ì„œëŠ” ëº€ë‹¤. 
                 respawnPool.Remove(mc);
             }
         }
