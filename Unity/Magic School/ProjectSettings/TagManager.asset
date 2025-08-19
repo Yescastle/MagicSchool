@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Potral
-  - Forest
-  - Plain
+  - Boundary
   - Lakeside
+  - Plain
+  - Forest
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Title
   - Water
   - UI
   - Player
