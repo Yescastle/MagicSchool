@@ -18,6 +18,7 @@ public class MonsterCloudSpawner : MonoBehaviour
     // 몬스터 구름 선택, 그리고 오브젝트 풀 생성
     public GameObject selectedMonsterCloud;
     public List<GameObject> monsterCloudPool;
+    public List<GameObject> respawnPool;
 
     // 풀 크기 : 기본은 5
     public int poolSize;
@@ -62,6 +63,9 @@ public class MonsterCloudSpawner : MonoBehaviour
 
                 // 나타난 구름은 리스트에서 제거
                 monsterCloudPool.RemoveAt(0);
+
+                // 리스폰 풀에 제거된 구름을 집어넣기
+                respawnPool.Add(monsterCloud);
             }
 
             // 현재 시간 0으로 초기화
@@ -69,6 +73,16 @@ public class MonsterCloudSpawner : MonoBehaviour
 
             // 적 생성 후 시간 초기화
             createTime = Random.Range(minTime, maxTime);
+        }
+
+        if(respawnPool.Count > 0)
+        {
+            GameObject mc = respawnPool[0];
+            if (mc.activeSelf == false)
+            {
+                monsterCloudPool.Add(mc);
+                respawnPool.Remove(mc);
+            }
         }
     }
 }

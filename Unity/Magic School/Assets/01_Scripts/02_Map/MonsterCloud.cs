@@ -45,6 +45,9 @@ public class MonsterCloud : MonoBehaviour
         // 만약 플레이어와 맞닿는다면, 1.5초 있다가 전투씬으로 연결된다.
         if (other.CompareTag("Player"))
         {
+            // 자기 자신을 없애버린다.
+            gameObject.SetActive(false);
+
             Invoke("ToFightScene", 1.5f);
             PlayerController.InstancePC.MeetOfMonsterCloud();
         }
@@ -55,10 +58,10 @@ public class MonsterCloud : MonoBehaviour
         // 만약 숲 몬스터 구름과 만났다면 숲 전투씬으로 이동된다.
         if (gameObject.CompareTag("Forest")) SceneManager.LoadScene("Forest");
 
-        // 만약 평원 몬스터 구름과 만났다면 평원 전투씬으로 이동한다.
-        if (gameObject.CompareTag("Plain")) SceneManager.LoadScene("Plain");
-
         // 만약 호숫가 몬스터 구름과 만났다면 호숫가 전투씬으로 이동한다.
         if (gameObject.CompareTag("Lakeside")) SceneManager.LoadScene("Lakeside");
+
+        // 만약 평원 몬스터 구름과 만났다면 평원 전투씬으로 이동한다.
+        if (gameObject.CompareTag("Plain")) SceneManager.LoadScene("Plain");
     }
 }
