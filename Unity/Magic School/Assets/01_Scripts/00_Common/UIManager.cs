@@ -22,6 +22,13 @@ public class UIManager : MonoBehaviour
         // 시작 메뉴로 이동
         SceneManager.LoadScene("StartMenu");
     }
+
+    public void ToCreateNew()
+    {
+        // 캐릭터 생성창으로 이동
+        SceneManager.LoadScene("CreateNew");
+    }
+
     public void ToSelectPlayer()
     {
         // 플레이어 선택창으로 이동
