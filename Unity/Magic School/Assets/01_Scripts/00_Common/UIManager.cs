@@ -27,11 +27,6 @@ public class UIManager : MonoBehaviour
         // 플레이어 선택창으로 이동
         SceneManager.LoadScene("SelectCharacter");
     }
-    public void ToCreateNew()
-    {
-        // 플레이어 생성창으로 이동
-        SceneManager.LoadScene("CreateNew");
-    }
     public void ToGame()
     {
         // (변경 예정): 현재 본 메서드는 "World" 씬으로 연결되도록 설정.
@@ -51,22 +46,18 @@ public class UIManager : MonoBehaviour
     // 맵 간 이동 메서드
     public void GoToSchool()
     {
-        // 학교 맵으로 이동
         SceneManager.LoadScene("School");
     }
     public void GoToMarketplace()
     {
-        // 상점가 맵으로 이동
         SceneManager.LoadScene("Marketplace");
     }
     public void GoToVillage()
     {
-        // 마을 맵으로 이동
         SceneManager.LoadScene("Village");
     }
     public void GoToWorld()
     {
-        // 월드 맵으로 이동
         SceneManager.LoadScene("World");
     }
 

@@ -703,7 +703,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1585189073}
+      - m_Target: {fileID: 395982209350569805, guid: e9cf88d9ce4168d4ea2f567aec3d9cf5, type: 3}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ToSelectPlayer
         m_Mode: 1
@@ -999,9 +999,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1585189072}
+      - m_Target: {fileID: 395982209350569805, guid: e9cf88d9ce4168d4ea2f567aec3d9cf5, type: 3}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ToSelectPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1049,79 +1049,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469154019}
   m_CullTransparentMesh: 1
---- !u!1001 &1585189071
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 397958214999001266, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 397958214999001266, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 397958214999001266, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 397958214999001266, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 397958214999001266, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 397958214999001266, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 397958214999001266, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 397958214999001266, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 397958214999001266, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 397958214999001266, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2368806945695889915, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-      propertyPath: m_Name
-      value: UIManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
---- !u!1 &1585189072 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2368806945695889915, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-  m_PrefabInstance: {fileID: 1585189071}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1585189073 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 395982209350569805, guid: 5303f8e48fc205f479b0f1737abe9fa3, type: 3}
-  m_PrefabInstance: {fileID: 1585189071}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585189072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7ef78b91069a694fa6d4cc8da8d0804, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1957781876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,7 +1132,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1585189073}
+      - m_Target: {fileID: 395982209350569805, guid: e9cf88d9ce4168d4ea2f567aec3d9cf5, type: 3}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
@@ -1263,4 +1190,3 @@ SceneRoots:
   - {fileID: 1176266292}
   - {fileID: 152908644}
   - {fileID: 337306618}
-  - {fileID: 1585189071}
