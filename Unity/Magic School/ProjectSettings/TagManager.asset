@@ -9,6 +9,7 @@ TagManager:
   - Lakeside
   - Plain
   - Forest
+  - Flame
   layers:
   - Default
   - TransparentFX

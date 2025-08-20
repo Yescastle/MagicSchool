@@ -22,16 +22,25 @@ public class UIManager : MonoBehaviour
         // 시작 메뉴로 이동
         SceneManager.LoadScene("StartMenu");
     }
-    public void ToSelectPlayer()
+
+    public void ToCreateNew()
+    {
+        // 캐릭터 생성창으로 이동
+        SceneManager.LoadScene("CreateNew");
+    }
+
+    public void ToLoadInfo()
     {
         // 플레이어 선택창으로 이동
-        SceneManager.LoadScene("SelectCharacter");
+        SceneManager.LoadScene("LoadInfo");
     }
+
     public void ToGame()
     {
-        // (변경 예정): 현재 본 메서드는 "World" 씬으로 연결되도록 설정.
-        SceneManager.LoadScene("World");
+        // 변경 예정
+        SceneManager.LoadScene("Campus");
     }
+
     public void ExitGame()
     {
         // 빌드 상에서 게임 종료
@@ -48,17 +57,10 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("School");
     }
-    public void GoToMarketplace()
+
+    public void GoToCampus()
     {
-        SceneManager.LoadScene("Marketplace");
-    }
-    public void GoToVillage()
-    {
-        SceneManager.LoadScene("Village");
-    }
-    public void GoToWorld()
-    {
-        SceneManager.LoadScene("World");
+        SceneManager.LoadScene("Campus");
     }
 
 }
