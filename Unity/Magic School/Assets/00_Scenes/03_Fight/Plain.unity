@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3951279591636005405, guid: 10dd86c3acdf68e4c9bc2b08160b4e00, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToWorld
+      value: GoToCampus
       objectReference: {fileID: 0}
     - target: {fileID: 4869385603791476499, guid: 10dd86c3acdf68e4c9bc2b08160b4e00, type: 3}
       propertyPath: m_Name

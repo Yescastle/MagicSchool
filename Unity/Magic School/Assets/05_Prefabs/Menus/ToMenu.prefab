@@ -304,7 +304,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 395982209350569805, guid: e9cf88d9ce4168d4ea2f567aec3d9cf5, type: 3}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ToStartMenu
+        m_MethodName: GoToWorld
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
