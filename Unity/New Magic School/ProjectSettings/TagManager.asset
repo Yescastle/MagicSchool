@@ -54,6 +54,9 @@ TagManager:
   - name: MonsterCloud
     uniqueID: 2221700373
     locked: 0
+  - name: Enemy
+    uniqueID: 1522763061
+    locked: 0
   - name: Player
     uniqueID: 4004526133
     locked: 0
