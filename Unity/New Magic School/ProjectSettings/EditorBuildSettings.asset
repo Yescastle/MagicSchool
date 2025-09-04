@@ -29,10 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00_Scenes/03_Fight/Plain.unity
     guid: 25141fa291be9134b9ca8141c94c6471
-  - enabled: 1
-    path: Assets/00_Scenes/04_Room/Classroom.unity
-    guid: 3a4d281d1b217014cbff61a1495f101b
-  - enabled: 1
-    path: Assets/00_Scenes/04_Room/Library.unity
-    guid: f01f53893e2b7df4980f111817c69d42
   m_configObjects: {}

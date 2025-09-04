@@ -56,8 +56,11 @@ public class GameManager : MonoBehaviour
     // 마법의 공격력을 정한다. (시간 상 일단은 '5'씩 깎이는 걸로)
     public int attackPoint;
 
-    // 에너미에게 받을 공격력은 5로 고정한다.
-    // int damage = 5;
+    // 마법 효과음
+    public AudioSource[] attackSound;
+
+    // 마법진 효과음
+    public AudioSource msSound;
 
     [Header("플레이어 상태 관리")]
     // 플레이어 프리팹
@@ -236,9 +239,17 @@ private void GageConditionor()
         GameObject magicSquare =
             Instantiate(magicSquares[n], new Vector3(magicSquareZone.position.x, -3.3f, magicSquareZone.position.z), Quaternion.Euler(300f, 0f, 0f));
 
+        // 마법진 효과음
+        AudioSource startMagic = msSound.GetComponent<AudioSource>();
+        startMagic.Play();
+
         // 시간 지나면 해당 번호의 프리팹 소환
         yield return new WaitForSeconds(2f);
         GameObject magic = Instantiate(magics[n], magicSpawnPoint.position, Quaternion.identity);
+
+        // 효과음도 같이 소환
+        AudioSource magicSound = attackSound[n].GetComponent<AudioSource>();
+        magicSound.Play();
 
         // 시간 지나면 마법 제거
         yield return new WaitForSeconds(show);
